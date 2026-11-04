@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavender Cafe | Fresh Coffee & Pastries</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="#home" class="logo">Lavender<span>Cafe</span></a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button id="theme-toggle" class="theme-button" type="button">
+                Toggle Light/Dark Mode
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="hero-text">
+                <p class="eyebrow">WELCOME TO LAVENDER CAFE</p>
+
+                <h1>Your Daily Dose of <span>Happiness</span></h1>
+
+                <p id="opening-status" aria-live="polite"></p>
+
+                <p>
+                    Enjoy freshly brewed coffee, delicious pastries,
+                    and a peaceful atmosphere. Your favorite cafe is
+                    just a click away!
+                </p>
+
+                <a href="#menu" class="button">Explore Our Menu</a>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=80"
+                    alt="Freshly brewed coffee on a cafe table">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="section-heading">
+                <p class="eyebrow">OUR STORY</p>
+                <h2>About Our Cafe</h2>
+            </div>
+
+            <article class="about-card">
+                <p>
+                    Welcome to Lavender Cafe, a cozy place for coffee
+                    lovers and people who enjoy delicious food. We
+                    serve freshly prepared drinks and tasty pastries
+                    in a warm and relaxing environment.
+                </p>
+
+                <p id="extra-story" hidden>
+                    Our cafe is designed to make every visit special.
+                    Whether you are meeting friends, studying, or
+                    taking a break from a busy day, we want you to
+                    feel comfortable. Come and enjoy your favorite
+                    coffee with a freshly baked treat!
+                </p>
+
+                <button id="read-more" class="button" type="button">
+                    Read More
+                </button>
+            </article>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="section">
+            <div class="section-heading">
+                <p class="eyebrow">FRESHLY PREPARED</p>
+                <h2>Our Menu</h2>
+                <p>Select your favorite items to calculate your order.</p>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="button filter-btn active"
+                        data-category="all" type="button">All</button>
+
+                <button class="button filter-btn"
+                        data-category="drinks" type="button">Drinks</button>
+
+                <button class="button filter-btn"
+                        data-category="pastries" type="button">Pastries</button>
+            </div>
+
+            <div class="table-wrapper">
+                <table id="menu-table">
+                    <thead>
+                        <tr>
+                            <th>Select</th>
+                            <th>Menu Item</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr data-category="drinks">
+                            <td>
+                                <input type="checkbox" class="menu-item"
+                                       value="3" aria-label="Select Espresso">
+                            </td>
+                            <td>Espresso</td>
+                            <td>Drinks</td>
+                            <td>$3.00</td>
+                        </tr>
+
+                        <tr data-category="drinks">
+                            <td>
+                                <input type="checkbox" class="menu-item"
+                                       value="4" aria-label="Select Cappuccino">
+                            </td>
+                            <td>Cappuccino</td>
+                            <td>Drinks</td>
+                            <td>$4.00</td>
+                        </tr>
+
+                        <tr data-category="drinks">
+                            <td>
+                                <input type="checkbox" class="menu-item"
+                                       value="5" aria-label="Select Latte">
+                            </td>
+                            <td>Latte</td>
+                            <td>Drinks</td>
+                            <td>$5.00</td>
+                        </tr>
+
+                        <tr data-category="pastries">
+                            <td>
+                                <input type="checkbox" class="menu-item"
+                                       value="4" aria-label="Select Croissant">
+                            </td>
+                            <td>Croissant</td>
+                            <td>Pastries</td>
+                            <td>$4.00</td>
+                        </tr>
+
+                        <tr data-category="pastries">
+                            <td>
+                                <input type="checkbox" class="menu-item"
+                                       value="3" aria-label="Select Cookie">
+                            </td>
+                            <td>Chocolate Cookie</td>
+                            <td>Pastries</td>
+                            <td>$3.00</td>
+                        </tr>
+
+                        <tr data-category="pastries">
+                            <td>
+                                <input type="checkbox" class="menu-item"
+                                       value="6" aria-label="Select Muffin">
+                            </td>
+                            <td>Blueberry Muffin</td>
+                            <td>Pastries</td>
+                            <td>$6.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="total-card">
+                <p>Your Order Total</p>
+                <p id="total" aria-live="polite">$0.00</p>
+            </div>
+        </section>
+
+        <!-- Contact and Feedback Form -->
+        <section id="contact" class="section contact-section">
+            <div class="section-heading">
+                <p class="eyebrow">WE WOULD LOVE TO HEAR FROM YOU</p>
+                <h2>Contact & Feedback</h2>
+                <p>Send us a message or share your special requests.</p>
+            </div>
+
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name"
+                           placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="you@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="birth-year">Birth Year</label>
+                    <input type="text" id="birth-year" name="birth-year"
+                           placeholder="e.g. 2002" inputmode="numeric"
+                           required>
+                    <p class="field-help">
+                        Enter your birth year to check age-based discount eligibility.
+                    </p>
+                </div>
+
+                <fieldset>
+                    <legend>Reason for Contact</legend>
+
+                    <label class="choice-label">
+                        <input type="radio" name="reason"
+                               value="Feedback" required>
+                        Feedback
+                    </label>
+
+                    <label class="choice-label">
+                        <input type="radio" name="reason"
+                               value="Order Inquiry">
+                        Order Inquiry
+                    </label>
+
+                    <label class="choice-label">
+                        <input type="radio" name="reason"
+                               value="General Question">
+                        General Question
+                    </label>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4"
+                              placeholder="Write your message..."
+                              required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="special-notes">
+                        Special Order Requests
+                    </label>
+
+                    <textarea id="special-notes" name="special-notes"
+                              rows="3" maxlength="100"
+                              placeholder="Any special instructions?"></textarea>
+
+                    <p id="char-count" aria-live="polite">
+                        100 characters remaining
+                    </p>
+                </div>
+
+                <label class="choice-label updates-label">
+                    <input type="checkbox" name="updates" value="yes">
+                    I would like to receive cafe updates.
+                </label>
+
+                <p id="discount-message" aria-live="polite"></p>
+                <p id="form-response" aria-live="polite"></p>
+
+                <button type="submit" class="button submit-button">
+                    Send Message
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Lavender Cafe. Made with love and coffee.</p>
+        <a href="#home">Back to Top ↑</a>
+    </footer>
+
+</body>
+</html>
